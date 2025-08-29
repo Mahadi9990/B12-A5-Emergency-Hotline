@@ -34,7 +34,6 @@ for (let i = 0; i < calls.length; i++) {
         date: new Date().toLocaleTimeString()
       }
       callHistory.push(data)
-      console.log(callHistory)
     });
 }
 
@@ -44,7 +43,6 @@ for (let i = 0; i < calls.length; i++) {
 
 document.getElementById("clear_btn").addEventListener('click',()=>{
     callHistory = null
-    console.log(callHistory)
 })
 
 
