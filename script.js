@@ -1,6 +1,11 @@
 // history
 
-let callHistory = []
+let callHistory = [
+    {
+        title : "hellow",
+        date : "10.40 AM"
+    }
+]
 
 
 // add hearts
@@ -37,7 +42,20 @@ for (let i = 0; i < calls.length; i++) {
     });
 }
 
+// History
 
+const historyContailer = document.getElementById("history")
+for(const item of callHistory){
+    const div = document.createElement('div')
+    div.innerHTML = `<div class="flex flex-row justify-between">
+              <div class="title">
+                <h1 class="text-2xl">Fireservice</h1>
+                <p>${data.title}</p>
+              </div>
+              <div class="time">${item.date}</div>
+            </div>`
+            historyContailer.appendChild(div)
+}
 
 // clear History
 
