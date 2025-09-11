@@ -34,7 +34,7 @@ const load = () => {
           <p class="text-xl font-semibold text-[#9e9297]">${item.category}</p>
         </div>
         <div class="flex justify-between items-center gap-5">
-          <button class="btn btn-outline btn-success">
+          <button onclick =copyText(${item.number}) class="btn btn-outline btn-success">
             <i class="fa-solid fa-copy"></i> Copy
           </button>
           <button id="call_${item.id}" class="btn btn-active btn-success">
@@ -59,6 +59,15 @@ const load = () => {
 };
 load();
 
+const copyText = (text)=> {
+  navigator.clipboard.writeText(text)
+          .then(() => {
+            alert('Text copied: ' + text);
+          })
+          .catch(err => {
+            console.error('Failed to copy text: ', err);
+          });
+}
 
 let callCount = 100;
 let history = [];
