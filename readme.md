@@ -27,7 +27,7 @@
 
 
 ### Qu: What is Event Delegation in JavaScript? Why is it useful?
-### And: sry forget
+### And: set a single event  to a parent element to handle events on its child elements to make many elements
 
 
 
